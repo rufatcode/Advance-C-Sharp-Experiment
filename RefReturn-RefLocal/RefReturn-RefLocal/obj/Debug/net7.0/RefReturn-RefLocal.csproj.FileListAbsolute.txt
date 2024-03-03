@@ -1,0 +1,15 @@
+/Volumes/Mac/Advance-C#/RefReturn-RefLocal/RefReturn-RefLocal/RefReturn-RefLocal/bin/Debug/net7.0/RefReturn-RefLocal
+/Volumes/Mac/Advance-C#/RefReturn-RefLocal/RefReturn-RefLocal/RefReturn-RefLocal/bin/Debug/net7.0/RefReturn-RefLocal.deps.json
+/Volumes/Mac/Advance-C#/RefReturn-RefLocal/RefReturn-RefLocal/RefReturn-RefLocal/bin/Debug/net7.0/RefReturn-RefLocal.runtimeconfig.json
+/Volumes/Mac/Advance-C#/RefReturn-RefLocal/RefReturn-RefLocal/RefReturn-RefLocal/bin/Debug/net7.0/RefReturn-RefLocal.dll
+/Volumes/Mac/Advance-C#/RefReturn-RefLocal/RefReturn-RefLocal/RefReturn-RefLocal/bin/Debug/net7.0/RefReturn-RefLocal.pdb
+/Volumes/Mac/Advance-C#/RefReturn-RefLocal/RefReturn-RefLocal/RefReturn-RefLocal/obj/Debug/net7.0/RefReturn-RefLocal.csproj.AssemblyReference.cache
+/Volumes/Mac/Advance-C#/RefReturn-RefLocal/RefReturn-RefLocal/RefReturn-RefLocal/obj/Debug/net7.0/RefReturn-RefLocal.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/Mac/Advance-C#/RefReturn-RefLocal/RefReturn-RefLocal/RefReturn-RefLocal/obj/Debug/net7.0/RefReturn-RefLocal.AssemblyInfoInputs.cache
+/Volumes/Mac/Advance-C#/RefReturn-RefLocal/RefReturn-RefLocal/RefReturn-RefLocal/obj/Debug/net7.0/RefReturn-RefLocal.AssemblyInfo.cs
+/Volumes/Mac/Advance-C#/RefReturn-RefLocal/RefReturn-RefLocal/RefReturn-RefLocal/obj/Debug/net7.0/RefReturn-RefLocal.csproj.CoreCompileInputs.cache
+/Volumes/Mac/Advance-C#/RefReturn-RefLocal/RefReturn-RefLocal/RefReturn-RefLocal/obj/Debug/net7.0/RefReturn-RefLocal.dll
+/Volumes/Mac/Advance-C#/RefReturn-RefLocal/RefReturn-RefLocal/RefReturn-RefLocal/obj/Debug/net7.0/refint/RefReturn-RefLocal.dll
+/Volumes/Mac/Advance-C#/RefReturn-RefLocal/RefReturn-RefLocal/RefReturn-RefLocal/obj/Debug/net7.0/RefReturn-RefLocal.pdb
+/Volumes/Mac/Advance-C#/RefReturn-RefLocal/RefReturn-RefLocal/RefReturn-RefLocal/obj/Debug/net7.0/RefReturn-RefLocal.genruntimeconfig.cache
+/Volumes/Mac/Advance-C#/RefReturn-RefLocal/RefReturn-RefLocal/RefReturn-RefLocal/obj/Debug/net7.0/ref/RefReturn-RefLocal.dll
