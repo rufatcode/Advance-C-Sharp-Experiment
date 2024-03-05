@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Collections;
 using System.Dynamic;
 using System.Reflection;
 using System.Text.Json;
@@ -484,5 +485,248 @@ Console.WriteLine(deserializeData.Name);
 */
 #endregion
 
+
+#region Hazir Interfacelər
+//IComarer
+/*
+Person person1 = new() { Name = "Person1", Age=22 };
+Person person2 = new() { Name = "Person2", Age=26 };
+Person person3 = new() { Name = "Person3", Age=18 };
+Person person4 = new() { Name = "Person4", Age=28 };
+Person person5 = new() { Name = "Person5", Age=15 };
+PersonCompare personCompare = new();
+
+List<Person> arr = new List<Person>{ person1, person2,person3,person4,person5 };
+
+arr.Sort(personCompare);
+
+Console.WriteLine(personCompare.Compare(person1,person2));
+Console.WriteLine("--------");
+foreach (var item in arr)
+{
+    Console.WriteLine(item.Name);
+}
+*/
+
+//IComperable
+/*
+Person person1 = new() { Name = "Person1", Age = 22 };
+Person person2 = new() { Name = "Person2", Age = 26 };
+Person person3 = new() { Name = "Person3", Age = 18 };
+Person person4 = new() { Name = "Person4", Age = 28 };
+Person person5 = new() { Name = "Person5", Age = 15 };
+
+Console.WriteLine(person1.CompareTo(person5));
+
+Console.WriteLine("----------------");
+
+List<Person> arr = new List<Person> { person1, person2, person3, person4, person5 };
+arr.Sort();
+
+foreach (var item in arr)
+{
+    Console.WriteLine(item.Name);
+}
+*/
+
+
+//IClonable
+/*
+Person person1 = new() { Name = "Person1", Age = 22 };
+
+Person person = person1.Clone() as Person;
+Console.WriteLine(person.Age);
+*/
+
+//IEnumerable
+/*
+Person person1 = new() { Name = "Person1", Age = 22 };
+person1.data=person1.Where(p => p.Contains("a")).ToList();
+foreach (var item in person1)
+{
+    Console.WriteLine(item);
+}
+*/
+
+//IDisposable
+/*
+using Person person1 = new() { Name = "Person1", Age = 22 };
+Person person2 = new() { Name = "Person2", Age = 22 };
+person2.Dispose();
+for (int i = 0; i < 5; i++)
+{
+    new Person();
+    
+}
+GC.Collect();
+
+
+
+
+
+
+
+
+
+class Person : ICloneable, IEnumerable<string>,IDisposable
+{
+    public string Name { get; set; }
+    public int? Age { get; set; }
+    public List<string> data { get; set; } = new List<string> { "apple", "orange", "onion", "cucumber", "tomoto", "carrot" };
+    public object Clone()
+    {
+        return new Person() { Name = this.Name, Age = this.Age + 10 };
+    }
+
+    public void Dispose()
+    {
+
+        Name = null;
+        Age = null;
+        data = null;
+        GC.SuppressFinalize(this);
+        Console.WriteLine("dispose is work");
+    }
+    ~ Person()
+    {
+        
+        Dispose();
+        Console.WriteLine("object is removed");
+    }
+    public IEnumerator<string> GetEnumerator()
+    {
+        return data.GetEnumerator();
+    }
+
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        throw new NotImplementedException();
+    }
+}
+
+
+//class PersonCompare : IComparer<Person>
+//{
+//    public int Compare(Person? x, Person? y)
+//    {
+//        return x.Age.CompareTo(y.Age);
+//    }
+//}
+//class Person:IComparable<Person>
+//{
+//    public string  Name { get; set; }
+//    public int Age { get; set; }
+
+//    public int CompareTo(Person? other)
+//    {
+//        return this.Age.CompareTo(other.Age);
+//    }
+//}
+
+
+*/
+
+#endregion
+
+#region IEnumerable,IEnumerator
+/*
+
+class StockEnumerator : IEnumerator<int>
+{
+    public int Current => _data[CurrentIndex];
+    public int CurrentIndex { get; set; } = -1;
+    private List<int> _data;
+
+    object IEnumerator.Current => _data[CurrentIndex];
+
+    public StockEnumerator(List<int> data) => _data = data;
+
+    public void Dispose()
+    {
+        _data = null;
+        GC.SuppressFinalize(this);
+    }
+
+    public bool MoveNext()
+    {
+        CurrentIndex += 2;
+        return CurrentIndex < _data.Count;
+    }
+
+    public void Reset()
+    {
+        CurrentIndex = -1;
+    }
+}
+class Stock
+{
+    public List<int> numbers = new List<int> { 6,12,9,33,5,1,3,54,23,18};
+    public void Add(int num)
+    {
+        numbers.Add(num);
+    }
+    public IEnumerator<int> GetEnumerator()
+    {
+        return new StockEnumerator(numbers);
+    }
+}
+
+*/
+#endregion
+
+#region Collection Initialazers
+
+/*
+Person person = new() {
+    {1,"sasa" },
+    {2,"sdsds" },
+    4,
+    "hello",
+    (21,'d',"dsds"),
+    (44,'u',"gfh"),
+    
+
+};
+
+foreach (var item in person)
+{
+    Console.WriteLine(item);
+}
+
+class Person:IEnumerable<int>
+{
+    public string Name { get; set; }
+    public List<int> Ages { get; set; } = new();
+    public List<string> Names { get; set; } = new();
+    public void Add(int age,string s)
+    {
+        Ages.Add(age);
+        Names.Add(s);
+    }
+    public void Add(int age)
+    {
+        Ages.Add(age);
+    }
+    public void Add(string name)
+    {
+        Names.Add(name);
+    }
+    public void Add((int i, char c, string s) t)
+    {
+        Ages.Add(t.i);
+        Names.Add(t.s);
+    }
+    public IEnumerator<int> GetEnumerator()
+    {
+        return Ages.GetEnumerator();
+    }
+
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        return Ages.GetEnumerator();
+    }
+}
+*/
+#endregion
 
 
