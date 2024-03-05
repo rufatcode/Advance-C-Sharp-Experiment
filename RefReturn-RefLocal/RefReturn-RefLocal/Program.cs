@@ -486,7 +486,7 @@ Console.WriteLine(deserializeData.Name);
 #endregion
 
 
-#region Hazir Interfacelər
+#region Buildin Interfaces
 //IComarer
 /*
 Person person1 = new() { Name = "Person1", Age=22 };
